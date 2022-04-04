@@ -1,5 +1,8 @@
 <h1>ルーム情報登録</h1>
 
+<!--エラーメッセージ-->
+<%= render "shared/error" , obj:@room %>
+
 <%= form_with model: @room do |f| %>
     <table>
         <tr>

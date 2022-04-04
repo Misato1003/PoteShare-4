@@ -1,9 +1,10 @@
 class Room < ApplicationRecord
-  　validates :name, presence: true
+    
+    validates :name, presence: true
     validates :address, presence: true
-    validates :price, presence: true, numericality: {only_integer: true,  greater_than_or_equal_to: 1, less_than_or_equal_to: 9999999}
-    validates :introduction, length: { in: 10..30 }
-    validates :image, presence: true
+    validates :price, presence: true
+    validates :introduction, presence: true
+    validates :image, presence:true
     
     mount_uploader :image, ImageUploader
     

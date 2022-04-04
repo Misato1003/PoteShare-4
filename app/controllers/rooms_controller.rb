@@ -16,7 +16,6 @@ class RoomsController < ApplicationController
   
   def create
     @room = Room.new(room_params)
-    
     if @room.save
       flash[:notice_success] = "ルームを新規登録しました"
       redirect_to "/rooms/posts"
